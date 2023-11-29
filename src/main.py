@@ -20,3 +20,26 @@ def systemproccess(func):
 @systemproccess
 def executeVGDSK():
     print("VDGSK.EXE", end="")
+
+class background:
+     register1 = None
+     def reg1(name, number):
+          global register1
+          print("REGISTERED SERVICE", name, "WITH PID 1")
+          register1 = number
+     def callREG1(number):
+          global register1
+          if register1 == number:
+               print("SERVICE WITH PID 1 WITH NUM", str(register1), "ACTIVATED")
+          else:
+               raise Exception(f"NUM {number} RETURNED WITH PID 0")
+class Service:
+     def __init__(self, servicename, servicenumber) -> None:
+          self.servicename = self.sn = servicename
+          self.servicenumber = self.snb = servicenumber
+     def call(self):
+          print(f"Running {self.sn}...")
+          background.reg1(self.sn, self.snb)
+service = Service("service.srv", 1198)
+service.call()
+background.callREG1(4937)
