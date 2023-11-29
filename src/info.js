@@ -1,0 +1,6 @@
+console.log("VERSION: O.O.1")
+console.log("NAME: DANKEN NT")
+console.log("TERMINAL: GIT")
+console.log("TVERSION: O.O.1")
+console.log("VPVERSION: O.O.1")
+console.log("PVERSION: O.O.1")
